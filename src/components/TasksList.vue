@@ -17,7 +17,7 @@ function createTask() {
       <div class="float-left flex">
         <h1 class="text-xl font-semibold">Tasks</h1>
       </div>
-      <div class="float-right mr-4 text-blue-400">
+      <div class="float-right mr-4 text-blue-400" v-tooltip="'Create new task'">
         <font-awesome-icon class="hover:cursor-pointer" icon="fa-solid fa-circle-plus" size="lg" @click="createTask()" />
       </div>
     </div>

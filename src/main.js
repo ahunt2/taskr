@@ -8,9 +8,11 @@ import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
 import { faCircleCheck } from '@fortawesome/free-solid-svg-icons'
 import { faCirclePlus } from '@fortawesome/free-solid-svg-icons'
 import { faPen } from '@fortawesome/free-solid-svg-icons'
+import FloatingVue from 'floating-vue'
 
 import App from './App.vue'
 import router from './router'
+import 'floating-vue/dist/style.css'
 
 library.add(faListCheck)
 library.add(faCircleXmark)
@@ -22,6 +24,7 @@ const app = createApp(App)
 
 app.use(createPinia())
 app.use(router)
+app.use(FloatingVue)
 app.component('font-awesome-icon', FontAwesomeIcon)
 
 app.mount('#app')

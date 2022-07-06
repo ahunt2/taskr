@@ -56,7 +56,7 @@ function cancelForm() {
         </div>
       </div>
 
-      <div class="flex p-3 mt-24 justify-center space-x-4">
+      <div class="flex p-3 justify-center space-x-4 btn-group">
         <button @click="submitForm()" class="w-24 h-8 bg-slate-800 rounded-md text-slate-50">Submit</button>
         <button @click="cancelForm()" class="w-24 h-8 bg-slate-800 rounded-md text-slate-50">Cancel</button>
       </div>
@@ -64,3 +64,13 @@ function cancelForm() {
     </form>
   </div>
 </template>
+
+<style scoped>
+.btn-group {
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+}
+</style>
