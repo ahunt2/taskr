@@ -8,6 +8,8 @@ import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
 import { faCircleCheck } from '@fortawesome/free-solid-svg-icons'
 import { faCirclePlus } from '@fortawesome/free-solid-svg-icons'
 import { faPen } from '@fortawesome/free-solid-svg-icons'
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons'
+import { faCaretUp } from '@fortawesome/free-solid-svg-icons'
 import FloatingVue from 'floating-vue'
 
 import App from './App.vue'
@@ -19,6 +21,8 @@ library.add(faCircleXmark)
 library.add(faCircleCheck)
 library.add(faCirclePlus)
 library.add(faPen)
+library.add(faCaretDown)
+library.add(faCaretUp)
 
 const app = createApp(App)
 

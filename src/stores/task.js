@@ -1,9 +1,23 @@
 import { defineStore } from 'pinia'
+import { v4 as uuid } from 'uuid'
 
 export const useTaskStore = defineStore({
   id: 'task',
   state: () => ({
-    tasks: []
+    tasks: [
+    {
+      id: uuid(),
+      title: 'Buy Groceries',
+      description: 'Bananas, Milk, Carrots',
+      created: new Date()
+    },
+    {
+      id: uuid(),
+      title: 'Wash Car',
+      description: '',
+      created: new Date()
+    }
+  ]
   }),
   actions: {
     addTask(task) {
