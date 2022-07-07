@@ -1,22 +1,11 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
 import TaskrHeader from './components/layout/TaskrHeader.vue'
 </script>
 
 <template>
   <div class="bg-slate-50">
     <TaskrHeader />
-    <!-- <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header> -->
-
     <RouterView />
   </div>
 </template>

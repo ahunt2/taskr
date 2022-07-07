@@ -32,3 +32,5 @@ app.use(FloatingVue)
 app.component('font-awesome-icon', FontAwesomeIcon)
 
 app.mount('#app')
+
+// TODO: refactor components (routing to edit task)

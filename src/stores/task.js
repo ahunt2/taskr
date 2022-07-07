@@ -32,7 +32,6 @@ export const useTaskStore = defineStore({
       this.tasks[index].description = editTask.description
     },
     getTask(taskId) {
-      console.log(`task id: ${taskId}`)
       const task = this.tasks.find(task => task.id === taskId)
       return task
     }

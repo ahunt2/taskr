@@ -10,23 +10,13 @@ const router = useRouter()
 const completed = ref(false)
 const expanded = ref(false)
 
-function completeTask() {
-  console.log('complete task')
+const completeTask = () => { completed.value = !completed.value }
 
-  completed.value = !completed.value
-}
+const removeTask = () => { taskStore.removeTask(props.id) }
 
-function removeTask() {
-  taskStore.removeTask(props.id)
-}
+const editTask = () => { router.push(`/edit-task/${props.id}`) }
 
-function editTask() {
-  router.push(`/edit-task/${props.id}`)
-}
-
-function toggleExpand() {
-  expanded.value = !expanded.value
-}
+const toggleExpand = () => { expanded.value = !expanded.value }
 </script>
 
 <template>

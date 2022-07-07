@@ -4,7 +4,6 @@ import { useTaskStore } from '../stores/task'
 
 const props = defineProps(['id'])
 const taskStore = useTaskStore()
-
 const task = taskStore.getTask(props.id)
 </script>
 

@@ -9,7 +9,6 @@ const formatedDate = computed(() => {
 
   return `${day}/${month}/${year}`
 })
-
 </script>
 
 <template>
