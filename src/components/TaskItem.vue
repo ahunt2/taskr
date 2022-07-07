@@ -14,8 +14,6 @@ function completeTask() {
   console.log('complete task')
 
   completed.value = !completed.value
-
-  // TODO: add dynamic class for completed task (light green background)
 }
 
 function removeTask() {
@@ -23,7 +21,7 @@ function removeTask() {
 }
 
 function editTask() {
-  router.push('/edit-task')
+  router.push(`/edit-task/${props.id}`)
 }
 
 function toggleExpand() {

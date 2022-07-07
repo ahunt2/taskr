@@ -57,8 +57,8 @@ function cancelForm() {
       </div>
 
       <div class="flex p-3 justify-center space-x-4 btn-group">
-        <button @click="submitForm()" class="w-24 h-8 bg-slate-800 rounded-md text-slate-50">Submit</button>
-        <button @click="cancelForm()" class="w-24 h-8 bg-slate-800 rounded-md text-slate-50">Cancel</button>
+        <button @click="submitForm()" class="w-24 h-8 bg-slate-800 rounded-md text-slate-50 hover:bg-blue-800">Submit</button>
+        <button @click="cancelForm()" class="w-24 h-8 bg-slate-800 rounded-md text-slate-50 hover:bg-blue-800">Cancel</button>
       </div>
 
     </form>

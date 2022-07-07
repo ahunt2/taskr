@@ -4,21 +4,21 @@ import { useRouter } from 'vue-router'
 import { v4 as uuid } from 'uuid'
 import { useTaskStore } from '../stores/task';
 
-const title = ref('')
-const description = ref('')
+const title = ref(props.title)
+const description = ref(props.description)
 const router = useRouter()
 const taskStore = useTaskStore()
+const props = defineProps(['id', 'title', 'description'])
 
-// TODO: populate form fields with task info
-
-function submitForm() {
+function updateForm() {
   const task = {
-    id: uuid(),
+    id: props.id,
     title: title.value,
     description: description.value
   }
 
-  // router.push('/')
+  taskStore.updateTask(task)
+  router.push('/')
 }
 
 function cancelForm() {
@@ -57,8 +57,8 @@ function cancelForm() {
       </div>
 
       <div class="flex p-3justify-center space-x-4 btn-group">
-        <button @click="submitForm()" class="w-24 h-8 bg-blue-800 rounded-md text-slate-50 hover:bg-slate-800">Submit</button>
-        <button @click="cancelForm()" class="w-24 h-8 bg-blue-800 rounded-md text-slate-50 hover:bg-slate-800">Cancel</button>
+        <button @click="updateForm()" class="w-24 h-8 bg-slate-800 rounded-md text-slate-50 hover:bg-blue-800">Update</button>
+        <button @click="cancelForm()" class="w-24 h-8 bg-slate-800 rounded-md text-slate-50 hover:bg-blue-800">Cancel</button>
       </div>
 
     </form>
